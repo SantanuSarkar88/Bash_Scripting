@@ -1,3 +1,5 @@
+#To create a new user and password:-
+
 #!/bin/bash
 
 #Ask for the username
