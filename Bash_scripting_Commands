@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Ask for the username
+read -p 'Enter the username to create: ' USER_NAME
+
+#Ask for the real name
+read -p 'Enter the user real name who is the account for: ' COMMENT
+
+#Ask for the password
+read -p 'Enter the password for user: ' PASSWORD
+
+#Create the User
+useradd -c "${USER_NAME}" -m ${COMMNET}
+
+#Set the password for the next login
+echo ${PASSWORD} | passwd --stdin ${USER_NAME}
+
+#Force password to change
+passwd -e ${USER_NAME}
